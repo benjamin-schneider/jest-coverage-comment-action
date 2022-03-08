@@ -171,6 +171,7 @@ const generateChangeSinceParam = (baseCommand: string) => {
 
 export const generateJestCommand = () => {
   core.debug('HHHOOOLLLAAAAAA');
+  core.info('HHHOOOLLLAAAAAA');
   const baseCommand = getInput('jest-command');
   const changeSinceParam = generateChangeSinceParam(baseCommand);
   return `${baseCommand} ${changeSinceParam}`;
