@@ -264,8 +264,8 @@ const setMainCoverageValue = (coverage) => __awaiter(void 0, void 0, void 0, fun
         core_1.debug(`setMainCoverageValue command output ${output}`);
         yield cache.saveCache(mainCoverageCacheFile.paths, mainCoverageCacheFile.key);
     }
-    catch (error) {
-        error(`File with coverage value ${mainCoverageCacheFile.paths[0]}, could not be saved:\n${error}`);
+    catch (errorMsg) {
+        core_1.error(`File with coverage value ${mainCoverageCacheFile.paths[0]}, could not be saved:\n${errorMsg}`);
     }
 });
 exports.setMainCoverageValue = setMainCoverageValue;
@@ -62788,7 +62788,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core_1 = __nccwpck_require__(2186);
 const action_1 = __nccwpck_require__(9139);
 action_1.start()
-    .then(() => core_1.info('Finished!'))
+    .then(() => core_1.info('Finished!1'))
     .catch(error => core_1.setFailed(error.message));
 
 })();

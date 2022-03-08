@@ -205,7 +205,7 @@ export const setMainCoverageValue = async (coverage: number): Promise<void> => {
     const output = await execCommand(command);
     debug(`setMainCoverageValue command output ${output}`);
     await cache.saveCache(mainCoverageCacheFile.paths, mainCoverageCacheFile.key);
-  } catch (error) {
-    error(`File with coverage value ${mainCoverageCacheFile.paths[0]}, could not be saved:\n${error}`);
+  } catch (errorMsg) {
+    error(`File with coverage value ${mainCoverageCacheFile.paths[0]}, could not be saved:\n${errorMsg}`);
   }
 };
